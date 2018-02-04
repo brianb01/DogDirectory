@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@ViewBag.BreedName</h2>
+
+<div>
+    <img src=@ViewBag.Url />
+
+    <div>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Edit", "Missing", "Dogs", null, null)</li>
+            <li>@Html.ActionLink("Back to List", "Index", "Dogs", null, null)</li>
+        </ol>
+    </div>
+</div>

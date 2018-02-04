@@ -1,0 +1,33 @@
+﻿@model DogDirectory.Models.BreedsList
+
+@{
+    ViewBag.Title = "Breed List";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+
+<div class="container">
+
+    @foreach (var breed in Model.Breeds)
+    {
+        <div class="row" >
+          
+            <div class="col-sm-4 breedName">
+                    @breed
+            </div>
+
+
+            <ol class="breadcrumb breedName">
+                <li>@Html.ActionLink("Edit", "Missing", "Dogs", null, null)</li>
+                <li>@Html.ActionLink("Details", "Details", "Dogs", new { id=@breed}, null)</li>
+                <li>@Html.ActionLink("Delete", "Delete", "Dogs", null, null)</li>
+            </ol>
+
+        </div>
+
+    }
+
+</div>
